@@ -138,7 +138,7 @@ body{
 .c4{
     height: 30px;
     width: 10%;
-   
+    cursor: pointer;
     box-shadow: 0 0 10px rgb(209,198,245);
     border-radius: 10px;
     display: flex;
