@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+
+}
+body{
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-image: linear-gradient(rgb(21, 247, 239),rgb(248, 16, 225));
+}
+.main{
+    width: 80vw;
+    height: 95%;
+    background-color: rgb(255,255,255);
+    padding: 5%;
+    overflow: scroll;
+    
+}
+img{
+    margin-left: 42%;
+    height: 10%;
+}
+h1{
+    font-size: 140%;
+    margin-bottom: 0.5%;
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
+}
+p{
+   color:rgba(11, 11, 11, 0.408);
+   font-family: "Madimi One", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+    margin-bottom: 2%;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+    border: 1px solid rgb(189, 229, 110);
+    border-radius: 30px;
+    background-color: aliceblue;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    background: rgb(12, 204, 243);  
+    border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+    background: #08c6e3;  
+    }
+
