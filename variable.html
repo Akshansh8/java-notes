@@ -3,19 +3,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="variable.css">
 </head>
 <body>
-    <div class="conatiner">
+    <div class="container">
+        <h1 class="intro">What is a A Variable</h1>
+        <br>
+        <p>Variables are containers for storing data values.</p>
+
+           <p> In Java, there are different types of variables, for example:</p>
+
+
+           <ul>
+            <li><code class="w3-codespan">String</code> - stores text, such as "Hello". String values are 
+            surrounded by double quotes</li>
+            <li><code class="w3-codespan">int</code> - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+            <li><code class="w3-codespan">float</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+            <li><code class="w3-codespan">char</code> - stores single characters, such as 
+            'a' or 'B'. Char values are surrounded by single quotes</li>
+            <li><code class="w3-codespan">boolean</code> - stores values with two states: 
+            true or false</li>
+           </ul>
+           
+           <br>
+
+           <h1>How To declare a Variable</h1>
+           <h3>Example</h3>
+           <div class="code
+           ">
+           
         <pre>
             <code>
                 public class Test{
                     public static void main(String[] args){
                         int x = 10;
-                        System.out.println(x); // Output: 10
+                        //here x is the name of variable and int is the datatype
                 }
             </code>
         </pre>
     </div>
+    <br>
+    <h1>Types of Variables in Java</h1>
+    <br>
+    <ul>
+        <li>Local Variable</li>
+        <li>Static Variable</li>
+        <li>Instance Variable</li>
+    </ul>
     
+    <br>
+    
+    <h2>1. Local Variable</h2>
+    <br>
+    <ul>
+        <li>These variables are created when the block is entered, or the function is called and destroyed after exiting from the block or when the call returns from the function.</li>
+        <li>The scope of these variables exists only within the block in which the variables are declared, i.e., we can access these variables only within that block.</li>
+        <li>Initialization of the local variable is mandatory before using it in the defined scope.</li>
+    </ul>
+
+    <h3>Example</h3>
+    <pre>
+        <code>
+            class Test {
+                public static void main(String[] args)
+                {
+                    // Declared a Local Variable
+                    int var = 10;
+             
+                    // This variable is local to this main method only
+                    System.out.println("Local Variable: " + var);
+                }
+            }
+        </code>
+    </pre>
+
+    <br>
+
+    <h2>2. Static Variable</h2>
+    <ul>
+        <li>These variables are declared similarly to instance variables. The difference is that static variables are declared using the static keyword within a class outside of any method, constructor, or block.</li>
+        <li>Unlike instance variables, we can only have one copy of a static variable per class, irrespective of how many objects we create.</li>
+        <li>Initialization of a static variable is not mandatory. Its default value is dependent on the data type of variable. For String it is null, for float it is 0.0f, for int it is 0, for Wrapper classes like Integer it is null, etc.</li>
+        <li>If we access a static variable without the class name, the compiler will automatically append the class name. But for accessing the static variable of a different class, we must mention the class name as 2 different classes might have a static variable with the same name.</li>
+        <li>If we access a static variable like an instance variable (through an object), the compiler will show a warning message, which won’t halt the program. The compiler will replace the object name with the class name automatically.</li>
+    </ul>
+
+    <h3>Example</h3>
+    <pre>
+        <code>
+            class Test {
+                // Declared static variable
+                public static String geek = "Shubham Jain";
+               
+                public static void main(String[] args)
+                {
+             
+                
+                    // static variable
+                    System.out.println(" Name is : " + Test.geek);
+             
+                }
+            }
+        </code>
+    </pre>
+
+    <br>
+    <h2>3. Instance Variable</h2>
+    <ul>
+        <li>As instance variables are declared in a class, these variables are created when an object of the class is created and destroyed when the object is destroyed.</li>
+        <li>Initialization of an instance variable is not mandatory. Its default value is dependent on the data type of variable. For String it is null, for float it is 0.0f, for int it is 0, for Wrapper classes like Integer it is null, etc.</li>
+        <li>Instance variables can be accessed only by creating objects.</li>
+        <li>We initialize instance variables using constructors while creating an object. We can also use instance blocks to initialize the instance variables.
+        </li>
+    </ul>
+
+    <h3>Example</h3>
+    <pre>
+        <code>
+            // Java Program to demonstrate
+// Instance Variables
+import java.io.*;
+
+class GFG {
+
+	// Declared Instance Variable
+	public String geek;
+	public int i;
+	public Integer I;
+	public GFG()
+	{
+		// Default Constructor
+		// initializing Instance Variable
+		this.geek = "Shubham Jain";
+	}
+
+	// Main Method
+	public static void main(String[] args)
+	{
+		// Object Creation
+		GFG name = new GFG();
+
+		// Displaying O/P
+		System.out.println("Geek name is: " + name.geek);
+		System.out.println("Default value for int is "
+						+ name.i);
+	
+		// toString() called internally
+		System.out.println("Default value for Integer is "
+						+ name.I);
+	}
+}
+
+        </code>
+    </pre>
+</div>
 </body>
 </html>
